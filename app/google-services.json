@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "190387598425",
+    "project_id": "olmedoalvaroimdbapp",
+    "storage_bucket": "olmedoalvaroimdbapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:190387598425:android:94645f075fa8e715deed48",
+        "android_client_info": {
+          "package_name": "edu.pmdm.olmedo_lvaroimdbapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuw2V-kl-pRM_eQQUR9o4wK1h8gaMP--E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
