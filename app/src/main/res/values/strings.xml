@@ -6,8 +6,8 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
-    <string name="menu_home">Home</string>
+    <string name="client_id">190387598425-v27d6avtkhr5kcd0bt6nnrr4frhs01de.apps.googleusercontent.com</string>
+    <string name="menu_home">Top 10</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
 </resources>
