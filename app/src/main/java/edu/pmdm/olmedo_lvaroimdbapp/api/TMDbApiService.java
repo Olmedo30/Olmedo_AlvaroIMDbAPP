@@ -1,17 +1,10 @@
 package edu.pmdm.olmedo_lvaroimdbapp.api;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-
-import edu.pmdm.olmedo_lvaroimdbapp.models.Movie;
 
 public class TMDbApiService {
     private static final String API_KEY = "1ff89b9fc0100a85c8feab8b12eab6e5"; // Tu clave API

@@ -28,7 +28,7 @@ public class IMDbApiService {
     }
 
     /**
-     * Método  para realizar peticiones HTTP GET a la API de
+     * Método para realizar peticiones HTTP GET a la API de
      * IMDb ubicada dentro de RapidAPI. Usamos la key de nuestra API
      * y el link del host, el cual como hemos dicho es RapidAPI, que
      * hemos declarado como variables al inicio del código.

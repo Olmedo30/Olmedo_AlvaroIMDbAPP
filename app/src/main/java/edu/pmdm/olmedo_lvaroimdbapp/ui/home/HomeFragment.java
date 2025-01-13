@@ -97,7 +97,6 @@ public class HomeFragment extends Fragment {
                     }
                     return true;
                 });
-
             }
 
             @Override
