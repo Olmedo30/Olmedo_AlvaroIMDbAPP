@@ -64,7 +64,6 @@ public class MovieDetails {
 
             //Devuelve un nuevo objeto MovieDetails con los datos obtenidos
             return new MovieDetails(releaseDate, rating);
-
         } catch (IOException e) {
             e.printStackTrace();
         } catch (Exception e) {

@@ -138,7 +138,6 @@ public class GalleryFragment extends Fragment {
                 });
     }
 
-
     //Maneja el click en el botón de compartir
     private void handleShareButtonClick() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
@@ -152,7 +151,6 @@ public class GalleryFragment extends Fragment {
             fetchMoviesAndShowDialog();
         }
     }
-
 
     //Obtiene los datos de cada película y muestra un AlertDialog
     private void fetchMoviesAndShowDialog() {

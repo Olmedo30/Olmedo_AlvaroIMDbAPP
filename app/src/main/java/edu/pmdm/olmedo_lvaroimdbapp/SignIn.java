@@ -47,7 +47,6 @@ public class SignIn extends AppCompatActivity {
                 }
             }
         });
-
         //Establece el listener para el botón
         signInButton.setOnClickListener(v -> signInWithGoogle());
     }
