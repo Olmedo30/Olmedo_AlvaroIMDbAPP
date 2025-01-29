@@ -165,7 +165,6 @@ public class MovieDetailsActivity extends AppCompatActivity {
     private void parseAndDisplayMovieDetailsFromTMDb(String jsonResponse) {
         try {
             JSONObject jsonObject = new JSONObject(jsonResponse);
-
             title = jsonObject.getString("title");
             releaseDate = jsonObject.getString("release_date");
             description = jsonObject.getString("overview");
@@ -296,14 +295,15 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
     //Abre la aplicación para mandar el SMS y muestra el mensaje con los datos de la película que queremos compartir.
     private void openSmsApp(String phoneNumber) {
-        String message = "Te recomiendo la película '" + title + "' con " + ratingText;
-        Intent smsIntent = new Intent(Intent.ACTION_VIEW);
-        smsIntent.setData(Uri.parse("sms:" + phoneNumber));
-        smsIntent.putExtra("sms_body", message);
-        if (smsIntent.resolveActivity(getPackageManager()) != null) {
+        try {
+            String message = "Te recomiendo la película '" + title + "' con " + ratingText;
+            Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
+            smsIntent.setData(Uri.parse("smsto:" + phoneNumber));
+            smsIntent.putExtra("sms_body", message);
             startActivity(smsIntent);
-        } else {
+        }catch (Exception e){
             Toast.makeText(this, "No hay aplicación de SMS disponible.", Toast.LENGTH_SHORT).show();
+
         }
     }
 }

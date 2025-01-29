@@ -118,7 +118,7 @@ public class SlideshowFragment extends Fragment {
                 String name = genreObject.getString("name");
                 String id = genreObject.getString("id");
                 genreNames.add(name);
-                genreMap.put(name, id); // Guardar en el mapa
+                genreMap.put(name, id);
             }
         } catch (Exception e) {
             Log.e("SlideshowFragment", "Error al parsear géneros: " + e.getMessage(), e);

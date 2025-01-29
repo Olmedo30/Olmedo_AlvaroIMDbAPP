@@ -8,7 +8,7 @@ import java.net.URL;
 
 public class IMDbApiService {
 
-    private static final String API_KEY = "3181d793ccmsh28b258514584729p1b14bajsnfafdd2c75bb5";
+    private static final String API_KEY = "8099f3a016msh8e0cc7d1ce24bf7p1d06a3jsn80d118e4d8b4";
     private static final String HOST = "imdb-com.p.rapidapi.com";
 
     /**
