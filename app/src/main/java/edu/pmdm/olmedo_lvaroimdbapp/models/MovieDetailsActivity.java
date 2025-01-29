@@ -205,7 +205,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
                 && sendSmsPermission == PackageManager.PERMISSION_GRANTED;
     }
 
-    //Solicita los permisos de READ_CONTACTS y SEND_SMS.
+    //Solicita los permisos de READ_CONTACTS y SEND_SMS
     private void requestContactsAndSmsPermission() {
         ActivityCompat.requestPermissions(
                 this,
@@ -214,7 +214,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         );
     }
 
-    //Abre la lista de contactos con un Intent de ACTION_PICK.
+    //Abre la lista de contactos con un Intent de ACTION_PICK
     private void openContactPicker() {
         Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
         startActivityForResult(intent, REQUEST_CODE_PICK_CONTACT);
