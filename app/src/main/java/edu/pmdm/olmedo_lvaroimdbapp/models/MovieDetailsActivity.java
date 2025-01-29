@@ -165,7 +165,6 @@ public class MovieDetailsActivity extends AppCompatActivity {
     private void parseAndDisplayMovieDetailsFromTMDb(String jsonResponse) {
         try {
             JSONObject jsonObject = new JSONObject(jsonResponse);
-
             title = jsonObject.getString("title");
             releaseDate = jsonObject.getString("release_date");
             description = jsonObject.getString("overview");
@@ -206,7 +205,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
                 && sendSmsPermission == PackageManager.PERMISSION_GRANTED;
     }
 
-    //Solicita los permisos de READ_CONTACTS y SEND_SMS.
+    //Solicita los permisos de READ_CONTACTS y SEND_SMS
     private void requestContactsAndSmsPermission() {
         ActivityCompat.requestPermissions(
                 this,
@@ -215,7 +214,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         );
     }
 
-    //Abre la lista de contactos con un Intent de ACTION_PICK.
+    //Abre la lista de contactos con un Intent de ACTION_PICK
     private void openContactPicker() {
         Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
         startActivityForResult(intent, REQUEST_CODE_PICK_CONTACT);
@@ -296,14 +295,15 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
     //Abre la aplicación para mandar el SMS y muestra el mensaje con los datos de la película que queremos compartir.
     private void openSmsApp(String phoneNumber) {
-        String message = "Te recomiendo la película '" + title + "' con " + ratingText;
-        Intent smsIntent = new Intent(Intent.ACTION_VIEW);
-        smsIntent.setData(Uri.parse("sms:" + phoneNumber));
-        smsIntent.putExtra("sms_body", message);
-        if (smsIntent.resolveActivity(getPackageManager()) != null) {
+        try {
+            String message = "Te recomiendo la película '" + title + "' con " + ratingText;
+            Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
+            smsIntent.setData(Uri.parse("smsto:" + phoneNumber));
+            smsIntent.putExtra("sms_body", message);
             startActivity(smsIntent);
-        } else {
+        }catch (Exception e){
             Toast.makeText(this, "No hay aplicación de SMS disponible.", Toast.LENGTH_SHORT).show();
+
         }
     }
 }
